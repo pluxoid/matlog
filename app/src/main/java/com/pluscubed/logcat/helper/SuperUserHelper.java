@@ -80,13 +80,13 @@ public class SuperUserHelper {
 
             }).run();
 
-            if (suProcess != null) {
-                try {
-                    suProcess.waitFor();
-                } catch (InterruptedException e) {
-                    log.e(e, "cannot get pids");
-                }
-            }
+            // if (suProcess != null) {
+            //     try {
+            //         suProcess.waitFor();
+            //     } catch (InterruptedException e) {
+            //         log.e(e, "cannot get pids");
+            //     }
+            // }
 
 
             try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(suProcess.getInputStream()), 8192);) {
